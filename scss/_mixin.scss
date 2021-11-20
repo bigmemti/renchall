@@ -1,0 +1,44 @@
+@mixin distance($side , $property) {
+    @for $var from 1 to 25 {
+       .#{$side}{ 
+            &-#{$var}{
+                #{$property}: $rem*$var;
+            }
+    
+            &y-#{$var}{
+                #{$property}-top: $rem*$var;
+                #{$property}-bottom: $rem*$var;
+            }
+    
+            &x-#{$var}{
+                #{$property}-right: $rem*$var;
+                #{$property}-left: $rem*$var;
+            }
+        
+            &r-#{$var}{
+                #{$property}-right: $rem*$var;
+            }
+        
+            &l-#{$var}{
+                #{$property}-left: $rem*$var;
+            }
+        
+            &t-#{$var}{
+                #{$property}-top: $rem*$var;
+            }
+        
+            &b-#{$var}{
+                #{$property}-bottom: $rem*$var;
+            }
+        }
+    }
+    
+}
+
+@mixin transition($property , $duration){
+    -ms-transition: $property  $duration;
+    -o-transition: $property  $duration;
+    -webkit-transition:  $property  $duration;
+    -moz-transition:  $property  $duration;
+    transition: $property  $duration;
+}

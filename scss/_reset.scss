@@ -1,0 +1,24 @@
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: $light-color;
+    font-family: $font-family;
+    line-height: 1.5;
+}
+
+a{
+    text-decoration: none;
+    color: $dark-color;
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    width: 100%;
+}

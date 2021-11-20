@@ -1,0 +1,88 @@
+section#home{
+    &-1{
+        .container{
+            .items{
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                grid-gap: 1rem;
+                margin-top: 2rem;
+                .fas{
+                    color: $primary-color;
+                    padding-bottom: 0.4rem;
+                }
+            }
+        }
+    }
+    &-2{
+        .items{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            margin-top: 2rem;
+            div {
+                padding: 3rem 0;
+                &:nth-child(odd){
+                    background-color: $primary-color;
+                    color: $light-color;
+                }
+                li{
+                    line-height: 2;
+                        &.items-title {
+                            font-size: 1.5rem;
+                        }
+                        &.items-number {
+                            font-size: 2rem;
+                            font-weight: bold;
+                        }
+                }
+            }
+            
+        }
+    }
+    &-3{
+        .container{
+            .process{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-gap: 1.5rem;
+                text-align: center;
+                &-step{
+                   position: absolute;
+                   top: 0;
+                   left: 0; 
+                   font-size: 28px;
+                   background: $primary-color;
+                   color: set-text-color($primary-color);
+                   border-radius: 50%;
+                   height: 15px;
+                   width: 15px;
+                   padding: 1rem;
+                   @include transition(all, 1s);
+                   line-height: 11px;
+                }
+                &-icon{
+                    border-radius: 50%;
+                    background-color: $dark-color;
+                    color: set-text-color($dark-color);
+                    padding: 2rem;
+                    width: 70px;
+                    height: 70px;
+                    line-height: 70px;
+                    text-align: center;
+                    position: relative;
+                    @include transition(all, 1s);
+                    &:hover{
+                        background-color: $primary-color;
+                        width: 90px;
+                        height: 90px;
+                        line-height: 90px;
+                        .process-step{
+                            background-color: $dark-color;
+                            color:  set-text-color($dark-color);
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

@@ -1,11 +1,14 @@
 @import "variables";
-@import "../node_modules/font-awesome/scss/font-awesome.scss";
-
-*{
-    margin: 0;
-    padding: 0;
-}
-
-body{
-    line-height: 1.5;
-}
+@import "../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/v4-shims.scss";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "function";
+@import "mixin";
+@import "reset";
+@import "utility_classes";
+@import "header";
+@import "home";
+@import "footer";
+@import "media";

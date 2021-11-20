@@ -1,0 +1,70 @@
+/*Utility classes*/
+
+.container{
+    max-width: $site-width;
+    padding: 0 1.5rem;
+    margin: auto;
+    overflow: hidden;
+}
+
+@include distance('m' , 'margin');
+
+@include distance('p' , 'padding');
+
+.text{
+
+    &-primary{  
+        color: $primary-color;  
+    }
+
+    &-secondary{
+        color: $secondary-color;   
+    }
+
+    &-light{    
+        color: $light-color; 
+    }
+
+    &-medium{   
+        color: $medium-color; 
+    }
+
+    &-dark{ 
+        color: $dark-color; 
+    }
+}
+%btn{
+    padding: 1rem 2rem;
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+    @include transition(all , 0.5s);
+    font-weight: 800;
+}
+.btn{
+    &-light{
+        background: $light-color;
+        color: $dark-color;
+        @extend %btn;
+        
+    }
+    
+}
+
+[class^="btn-"]:hover{
+    background: $primary-color;
+    color: $light-color;
+}
+
+.text-center{
+    text-align: center;
+}
+
+
+.bottom-line{
+    height: 2px;
+    width: 17em;
+    background-color: $primary-color;
+    display: block;
+    margin: 0 auto 1rem auto;
+}
