@@ -1,33 +1,16 @@
 @mixin distance($side , $property) {
     @for $var from 1 to 25 {
        .#{$side}{ 
-            &-#{$var}{
-                #{$property}: $rem*$var;
-            }
-    
-            &y-#{$var}{
-                #{$property}-top: $rem*$var;
-                #{$property}-bottom: $rem*$var;
-            }
-    
-            &x-#{$var}{
-                #{$property}-right: $rem*$var;
-                #{$property}-left: $rem*$var;
-            }
-        
-            &r-#{$var}{
+            &r-#{$var},&x-#{$var},&-#{$var}{
                 #{$property}-right: $rem*$var;
             }
-        
-            &l-#{$var}{
+            &l-#{$var},&x-#{$var},&-#{$var}{
                 #{$property}-left: $rem*$var;
             }
-        
-            &t-#{$var}{
+            &t-#{$var},&y-#{$var},&-#{$var}{
                 #{$property}-top: $rem*$var;
             }
-        
-            &b-#{$var}{
+            &b-#{$var},&y-#{$var},&-#{$var}{
                 #{$property}-bottom: $rem*$var;
             }
         }
